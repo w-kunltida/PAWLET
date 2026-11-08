@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAWLET- See the Trash, Save the Wildlife</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#2D4534] min-h-screen font-['Prompt'] flex items-center justify-center p-0 sm:p-4 text-[#5C402E]">
+
+  <!-- Mobile Frame Container with Soft Gradient Background -->
+  <div class="w-full max-w-sm h-screen sm:h-[844px] bg-gradient-to-b from-[#FCE8D5] via-[#E2F0EA] to-[#FFF9ED] sm:rounded-[48px] shadow-2xl flex flex-col justify-between overflow-hidden relative border-0 sm:border-[8px] sm:border-[#355C41]/20">
+    
+    <!-- Status Bar Header (Dynamic Island Style) -->
+    <div class="pt-3 pb-1 px-6 flex justify-between items-center text-xs text-[#5C402E]/70 z-30 select-none">
+      <span class="font-semibold text-xs">9:41</span>
+      <div class="w-24 h-5 bg-[#5C402E]/15 rounded-full hidden sm:block"></div>
+      <div class="flex items-center gap-1.5">
+        <i data-lucide="wifi" class="w-3.5 h-3.5"></i>
+        <i data-lucide="battery" class="w-3.5 h-3.5"></i>
+      </div>
+    </div>
+
+    <!-- Top App Navigation (Header like image 3) -->
+    <header class="px-5 py-3 flex justify-between items-center z-20">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-white/80 backdrop-blur-md p-0.5 shadow-sm border border-white/60 flex items-center justify-center text-xl">
+          🦦
+        </div>
+        <div>
+          <p class="text-[11px] text-[#5C402E]/70 font-medium">Hello</p>
+          <h1 class="font-['Mali'] font-bold text-base text-[#355C41] leading-none">Welcome to PAWLET</h1>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button class="w-9 h-9 rounded-full bg-white/80 backdrop-blur-md shadow-sm border border-white/60 flex items-center justify-center text-[#5C402E] hover:bg-white">
+          <i data-lucide="bell" class="w-4 h-4"></i>
+        </button>
+        <button class="w-9 h-9 rounded-full bg-white/80 backdrop-blur-md shadow-sm border border-white/60 flex items-center justify-center text-[#5C402E] hover:bg-white">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Dynamic Content Area -->
+    <main id="main-content" class="flex-1 overflow-y-auto px-4 py-2 pb-24 relative">
+      <!-- Content from Pawlet.js -->
+    </main>
+
+    <!-- Floating Curved Bottom Navigation (Style matching image 3) -->
+    <div class="fixed bottom-3 left-0 right-0 max-w-sm mx-auto px-4 z-40">
+      <nav class="bg-white/90 backdrop-blur-xl border border-white/80 px-2 py-2 flex justify-around items-center shadow-lg rounded-full">
+        <button onclick="switchTab('home')" id="nav-home" class="nav-btn flex-1 flex flex-col items-center gap-1 py-1 px-2 rounded-full transition-all duration-300">
+          <div class="icon-wrapper p-2 rounded-full transition-all duration-300">
+            <i data-lucide="home" class="w-5 h-5"></i>
+          </div>
+        </button>
+
+        <button onclick="switchTab('scan')" id="nav-scan" class="nav-btn flex-1 flex flex-col items-center gap-1 py-1 px-2 rounded-full transition-all duration-300">
+          <div class="icon-wrapper p-2 rounded-full transition-all duration-300">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+        </button>
+
+        <button onclick="switchTab('wildlife')" id="nav-wildlife" class="nav-btn flex-1 flex flex-col items-center gap-1 py-1 px-2 rounded-full transition-all duration-300">
+          <div class="icon-wrapper p-2 rounded-full transition-all duration-300">
+            <i data-lucide="paw-print" class="w-5 h-5"></i>
+          </div>
+        </button>
+
+        <button onclick="switchTab('about')" id="nav-about" class="nav-btn flex-1 flex flex-col items-center gap-1 py-1 px-2 rounded-full transition-all duration-300">
+          <div class="icon-wrapper p-2 rounded-full transition-all duration-300">
+            <i data-lucide="info" class="w-5 h-5"></i>
+          </div>
+        </button>
+      </nav>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
